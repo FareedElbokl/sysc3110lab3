@@ -24,6 +24,10 @@ public class AddressBook {
         return null;
     }
 
+    public void newMethod(){
+        System.out.println("Testing new branch");
+    }
+
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Joe", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
