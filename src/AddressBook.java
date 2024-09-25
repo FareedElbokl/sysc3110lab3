@@ -3,7 +3,7 @@ import java.util.List;
 
 public class AddressBook {
 
-    private List<BuddyInfo> buddies;
+    private ArrayList<BuddyInfo> buddies;
 
     public AddressBook(){
      this.buddies = new ArrayList<>();
@@ -15,14 +15,19 @@ public class AddressBook {
         }
     }
 
-    public void removeBuddy(BuddyInfo buddy){
-        buddies.remove(buddy);
+    public BuddyInfo removeBuddy(int index){
+
+        if (index >= 0 && index < buddies.size()){
+            return buddies.remove(index);
+        }
+
+        return null;
     }
 
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Joe", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
 }
