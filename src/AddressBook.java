@@ -29,5 +29,7 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(0);
+        System.out.println("This text was added in github");
+
     }
 }
